@@ -1,0 +1,24 @@
+
+db.enemy.insertMany([
+  {
+	enemyName: "Orc-Warrior",
+	attack: 10
+},
+  {
+	enemyName: "Orc-Shaman",
+	attack: 5
+}
+]);
+db.enemy.deleteOne({ attack: 5});
+db.enemy.deleteOne({ attack: 10});
+db.enemy.insertMany([
+  {
+	enemyName: "Orc-Warrior",
+	attack: 10
+},
+  {
+	enemyName: "Orc-Shaman",
+	attack: 5
+}
+]);
+db.enemy.updateMany({}, {$set:{level_enemy: -1}})
